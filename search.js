@@ -18,6 +18,7 @@ if (process.argv.length < 3) { //if no params
     return;
   }
   filterText(process.argv[3], filterExt(filesArr));
+  //TODO: check if case sensitve
 }
 
 function validateExt(files) {
