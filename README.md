@@ -8,4 +8,4 @@ C:\MyFolder> node search [EXT] [TEXT]
 search the string "Ori" in ".txt" files:
 **C:\MyFolder> node search txt Ori**
 
-##### result: **C:\MyFolder\sample.txt**
+**result: C:\MyFolder\sample.txt**
