@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-let dirPath = './';
 let errorMessege = 'No file was found';
 let filesArr = []
 
@@ -56,17 +55,13 @@ function filterExt(files) {
 }
 
 function filterText(text, files) {
-  files.forEach(file => {
-    fs.readFile(file, (err, content) => {
-      if (err) {
-        return console.error(err.message);
-      } else {
-        if (content.indexOf(text) >= 0) {
-          console.log(file);
-        } else {
-          return false;
-        }
-      }
-    });
+  var found = files.find(element => {
+    let fileResult = fs.readFileSync(element);
+    return fileResult.indexOf(text) >= 0;
   });
+  if (found) {
+    console.log(found);
+  } else {
+    console.log('No file was found');
+  }
 }
