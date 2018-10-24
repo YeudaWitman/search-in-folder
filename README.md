@@ -5,4 +5,5 @@ The application searches for all files that contains a specified string under th
 C:\MyFolder&gt; node search.js [txt] [TEXT]
 #### Sample:
 C:\MyFolder&gt; node search.js txt Ori
+
 result: C:\MyFolder\sample.txt
