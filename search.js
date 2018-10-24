@@ -56,13 +56,13 @@ function filterExt(files) {
 }
 
 function filterText(text, files) {
-  var found = files.find(element => {
+  var found = files.filter(element => {
     let fileResult = fs.readFileSync(element);
     return fileResult.indexOf(text) >= 0;
   });
-  if (found) {
-    console.log(found);
-  } else {
+  if (found.length < 1) {
     console.log('No file was found');
+  } else {
+    found.forEach(e => console.log(e));
   }
 }
