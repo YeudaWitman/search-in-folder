@@ -5,7 +5,8 @@ The application searches for all files that contains a specified string under th
 C:\MyFolder> node search [EXT] [TEXT]
 
 ## Sample:
-search the string "Ori" in ".txt" files:
+search the string "Ori" in ".txt" files.
+
 **C:\MyFolder> node search txt Ori**
 
 **result: C:\MyFolder\sample.txt**
